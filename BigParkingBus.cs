@@ -46,23 +46,19 @@ namespace TP_LABS
             writer.WriteLine("CountLeveles:" + parkingStages.Count);
             foreach (var level in parkingStages)
             {
-                    writer.WriteLine("Level");
-                    for (int i = 0; i < countPlaces; i++)
+                writer.WriteLine("Level");
+                foreach (IBus car in level)
+                {
+                    if (car.GetType().Name == "CommonBus")
                     {
-                        var bus = level[i];
-                        if (bus != null)
-                        {
-                            if (bus.GetType().Name == "CommonBus")
-                            {
-                               writer.Write(i + ":CommonBus:");
-                            }
-                            if (bus.GetType().Name == "Bus")
-                            {
-                            writer.Write(i + ":Bus:");
-                            }
-                            writer.WriteLine(bus);
-                        }
+                        writer.Write(level.GetKey + ":CommonBus:");
                     }
+                    if (car.GetType().Name == "Bus")
+                    {
+                        writer.Write(level.GetKey + ":Bus:");
+                    }
+                    writer.Write(car);
+                }
             }
             writer.Close();
             return true;
@@ -77,7 +73,6 @@ namespace TP_LABS
 
             using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
             {
-
                 int counter = -1;
                 IBus bus = null;
 
@@ -90,7 +85,6 @@ namespace TP_LABS
                         parkingStages.Clear();
                     }
                     parkingStages = new List<ParkingBus<IBus>>(count);
-
                 }
                 else
                 {
@@ -135,6 +129,11 @@ namespace TP_LABS
         {
             byte[] info = new UTF8Encoding(true).GetBytes(text);
             stream.Write(info, 0, info.Length);
+        }
+
+        public void Sort()
+        {
+            parkingStages.Sort();
         }
     }
 }

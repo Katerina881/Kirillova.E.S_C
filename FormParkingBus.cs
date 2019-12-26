@@ -89,7 +89,8 @@ namespace TP_LABS
         }
 
         private void AddBus(IBus bus)
-        { if (bus != null && listBox.SelectedIndex > -1)
+        {
+            if (bus != null && listBox.SelectedIndex > -1)
             {
                 try
                 {
@@ -102,6 +103,11 @@ namespace TP_LABS
                     MessageBox.Show(ex.Message, "Переполнение", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     logger.Error("Переполнение");
+                }
+                catch (ParkingAlreadyHaveException ex)
+                {
+                    MessageBox.Show(ex.Message, "Дублирование", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Дублирование");
                 }
                 catch (Exception ex)
                 {
@@ -152,6 +158,13 @@ namespace TP_LABS
                 }
                 Draw();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            parkingBus.Sort();
+            Draw();
+            logger.Info("Сортировка уровней");
         }
     }
 }

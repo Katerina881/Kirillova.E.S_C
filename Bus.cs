@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_LABS
 {
-    public class Bus : CommonBus
+    public class Bus : CommonBus, IComparable<Bus>, IEquatable<Bus>
     {
         public Color DopColor { private set; get; }
         public bool Roof { private set; get; }
@@ -85,6 +85,75 @@ bool roof, bool sideImg) :
                 Brush brWht = new SolidBrush(Color.WhiteSmoke);
                 g.FillRectangle(brWht, _startPosX, _startPosY, 85, 3);
             }
+        }
+
+        public int CompareTo(Bus other)
+        {
+            var res = (this is CommonBus).CompareTo(other is CommonBus);
+            if (res != 0)
+            {
+                return res;
+            }
+            if (DopColor != other.DopColor)
+            {
+                DopColor.Name.CompareTo(other.DopColor.Name);
+            }
+            if (Roof != other.Roof)
+            {
+                return Roof.CompareTo(other.Roof);
+            }
+            if (SideImg != other.SideImg)
+            {
+                return SideImg.CompareTo(other.SideImg);
+            }
+            return 0;
+        }
+
+        public bool Equals(Bus other)
+        {
+            var res = (this as CommonBus).Equals(other as CommonBus);
+            if (!res)
+            {
+                return res;
+            }
+            if (GetType().Name != other.GetType().Name)
+            {
+                return false;
+            }
+            if (DopColor != other.DopColor)
+            {
+                return false;
+            }
+            if (Roof != other.Roof)
+            {
+                return false;
+            }
+            if (SideImg != other.SideImg)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public override bool Equals(Object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!(obj is Bus carObj))
+            {
+                return false;
+            }
+            else
+            {
+                return Equals(carObj);
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
