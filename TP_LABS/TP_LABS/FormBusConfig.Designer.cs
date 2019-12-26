@@ -154,7 +154,7 @@
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BackColor = System.Drawing.Color.Gray;
             this.panel8.Location = new System.Drawing.Point(103, 269);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(53, 52);
@@ -162,7 +162,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Location = new System.Drawing.Point(103, 185);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(53, 52);
@@ -170,7 +170,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel6.BackColor = System.Drawing.Color.Green;
             this.panel6.Location = new System.Drawing.Point(103, 111);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(53, 52);
@@ -178,7 +178,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel5.BackColor = System.Drawing.Color.Blue;
             this.panel5.Location = new System.Drawing.Point(103, 31);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(53, 52);
@@ -186,7 +186,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel4.BackColor = System.Drawing.Color.Yellow;
             this.panel4.Location = new System.Drawing.Point(17, 269);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(53, 52);
@@ -194,7 +194,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(17, 185);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(53, 52);
@@ -202,7 +202,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.Cyan;
             this.panel2.Location = new System.Drawing.Point(17, 111);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(53, 52);
@@ -210,7 +210,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Location = new System.Drawing.Point(17, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(53, 52);

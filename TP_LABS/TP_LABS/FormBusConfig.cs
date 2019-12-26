@@ -133,6 +133,5 @@ namespace TP_LABS
             eventAddBus?.Invoke(bus);
             Close();
         }
-        
     }
 }
