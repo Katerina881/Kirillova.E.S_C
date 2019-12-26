@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,9 +14,11 @@ namespace TP_LABS
         private const int countPlaces = 20;
         private int pictureWidth;
         private int pictureHeight;
+        Logger logger;
 
         public BigParkingBus(int countStages, int pictureWidth, int pictureHeight)
         {
+            logger = LogManager.GetCurrentClassLogger();
             parkingStages = new List<ParkingBus<IBus>>();
             this.pictureWidth = pictureWidth;
             this.pictureHeight = pictureHeight;
@@ -69,7 +72,7 @@ namespace TP_LABS
         {
             if (!File.Exists(filename))
             {
-                return false;
+                throw new FileNotFoundException();
             }
 
             using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
@@ -91,7 +94,8 @@ namespace TP_LABS
                 }
                 else
                 {
-                    return false;
+                    throw new Exception("Неверный формат файла"); 
+
                 }
                 while (true)
                 {
