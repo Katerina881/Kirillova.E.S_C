@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_LABS", "TP_LABS.csproj", "{BB88961F-861A-447C-8C1E-AD6189ADE278}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP_LABS", "TP_LABS\TP_LABS.csproj", "{BB88961F-861A-447C-8C1E-AD6189ADE278}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {118AA863-23B1-4D4D-8E73-1834AE97D3E2}
+		SolutionGuid = {D1C9BB55-4BD4-4EAC-BF7E-4FB0F3D34A2F}
 	EndGlobalSection
 EndGlobal

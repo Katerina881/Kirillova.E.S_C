@@ -6,6 +6,8 @@ using System.Windows.Forms;
 
 namespace TP_LABS
 {
+    public delegate void busDelegate(IBus bus);
+
     static class Program
     {
         /// <summary>

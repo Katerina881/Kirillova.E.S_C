@@ -17,9 +17,9 @@ namespace TP_LABS
 bool roof, bool sideImg) :
             base (maxSpeed, weight, mainColor)
         {
-            MaxSpeed = maxSpeed;
-            Weight = weight;
-            MainColor = mainColor;
+            //MaxSpeed = maxSpeed;
+            //Weight = weight;
+            //MainColor = mainColor;
             DopColor = dopColor;
             Roof = roof;
             SideImg = sideImg;
@@ -34,6 +34,11 @@ bool roof, bool sideImg) :
             Left,
 
             Right
+        }
+
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
         }
 
         public override void DrawBus(Graphics g)
