@@ -13,7 +13,7 @@ namespace TP_LABS
     public partial class FormBus : Form
     {
 
-        private Bus bus;
+        private IBus bus;
         public FormBus()
         {
             InitializeComponent();
@@ -32,6 +32,14 @@ namespace TP_LABS
             Random rnd = new Random();
             bus = new Bus(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Red,
  Color.Yellow, true, true);
+            bus.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxBus.Width, pictureBoxBus.Height);
+            Draw();
+        }
+
+        private void buttonCreateCommon_Click(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            bus = new CommonBus(rnd.Next(100, 300), rnd.Next(1000, 2000), Color.Red);
             bus.SetPosition(rnd.Next(10, 100), rnd.Next(10, 100), pictureBoxBus.Width, pictureBoxBus.Height);
             Draw();
         }
