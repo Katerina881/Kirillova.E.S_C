@@ -25,17 +25,6 @@ bool roof, bool sideImg) :
             SideImg = sideImg;
         }
 
-        public enum Direction
-        {
-            Up,
-
-            Down,
-
-            Left,
-
-            Right
-        }
-
         public override void DrawBus(Graphics g)
         {
             Brush br = new SolidBrush(MainColor);

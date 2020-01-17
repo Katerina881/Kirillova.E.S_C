@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.pictureBoxBus = new System.Windows.Forms.PictureBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonCreateBus = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
             this.buttonDown = new System.Windows.Forms.Button();
             this.buttonLeft = new System.Windows.Forms.Button();
             this.buttonRight = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCreateCommonBus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBus)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,15 +47,15 @@
             this.pictureBoxBus.TabIndex = 0;
             this.pictureBoxBus.TabStop = false;
             // 
-            // buttonCreate
+            // buttonCreateBus
             // 
-            this.buttonCreate.Location = new System.Drawing.Point(11, 10);
-            this.buttonCreate.Name = "buttonCreate";
-            this.buttonCreate.Size = new System.Drawing.Size(214, 28);
-            this.buttonCreate.TabIndex = 1;
-            this.buttonCreate.Text = "Создать двухэтажный автобус";
-            this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonCreateBus.Location = new System.Drawing.Point(11, 10);
+            this.buttonCreateBus.Name = "buttonCreateBus";
+            this.buttonCreateBus.Size = new System.Drawing.Size(214, 28);
+            this.buttonCreateBus.TabIndex = 1;
+            this.buttonCreateBus.Text = "Создать двухэтажный автобус";
+            this.buttonCreateBus.UseVisualStyleBackColor = true;
+            this.buttonCreateBus.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonUp
             // 
@@ -105,27 +105,27 @@
             this.buttonRight.UseVisualStyleBackColor = true;
             this.buttonRight.Click += new System.EventHandler(this.buttonMove_Click);
             // 
-            // button1
+            // buttonCreateCommonBus
             // 
-            this.button1.Location = new System.Drawing.Point(259, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Создать обычный автобус";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonCreateCommon_Click);
+            this.buttonCreateCommonBus.Location = new System.Drawing.Point(259, 10);
+            this.buttonCreateCommonBus.Name = "buttonCreateCommonBus";
+            this.buttonCreateCommonBus.Size = new System.Drawing.Size(214, 28);
+            this.buttonCreateCommonBus.TabIndex = 6;
+            this.buttonCreateCommonBus.Text = "Создать обычный автобус";
+            this.buttonCreateCommonBus.UseVisualStyleBackColor = true;
+            this.buttonCreateCommonBus.Click += new System.EventHandler(this.buttonCreateCommon_Click);
             // 
             // FormBus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCreateCommonBus);
             this.Controls.Add(this.buttonRight);
             this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.buttonUp);
-            this.Controls.Add(this.buttonCreate);
+            this.Controls.Add(this.buttonCreateBus);
             this.Controls.Add(this.pictureBoxBus);
             this.Name = "FormBus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -138,12 +138,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxBus;
-        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonCreateBus;
         private System.Windows.Forms.Button buttonUp;
         private System.Windows.Forms.Button buttonDown;
         private System.Windows.Forms.Button buttonLeft;
         private System.Windows.Forms.Button buttonRight;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCreateCommonBus;
     }
 }
 

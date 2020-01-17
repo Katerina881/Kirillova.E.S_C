@@ -24,7 +24,7 @@ namespace TP_LABS
             _pictureHeight = height;
         }
         public abstract void DrawBus(Graphics g);
-        public abstract void MoveTransport(Bus.Direction direction);
+        public abstract void MoveTransport(Dir.Direction direction);
 
     }
 }

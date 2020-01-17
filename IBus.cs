@@ -10,7 +10,7 @@ namespace TP_LABS
     interface IBus
     {
         void SetPosition(int x, int y, int width, int height);
-        void MoveTransport(Bus.Direction direction);
+        void MoveTransport(Dir.Direction direction);
         void DrawBus(Graphics g);
     }
 }
