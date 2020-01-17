@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBoxBus = new System.Windows.Forms.PictureBox();
-            this.buttonCreateBus = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonUp = new System.Windows.Forms.Button();
             this.buttonDown = new System.Windows.Forms.Button();
             this.buttonLeft = new System.Windows.Forms.Button();
@@ -47,15 +47,15 @@
             this.pictureBoxBus.TabIndex = 0;
             this.pictureBoxBus.TabStop = false;
             // 
-            // buttonCreateBus
+            // buttonCreate
             // 
-            this.buttonCreateBus.Location = new System.Drawing.Point(11, 10);
-            this.buttonCreateBus.Name = "buttonCreateBus";
-            this.buttonCreateBus.Size = new System.Drawing.Size(214, 28);
-            this.buttonCreateBus.TabIndex = 1;
-            this.buttonCreateBus.Text = "Создать двухэтажный автобус";
-            this.buttonCreateBus.UseVisualStyleBackColor = true;
-            this.buttonCreateBus.Click += new System.EventHandler(this.buttonCreate_Click);
+            this.buttonCreate.Location = new System.Drawing.Point(11, 10);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(214, 28);
+            this.buttonCreate.TabIndex = 1;
+            this.buttonCreate.Text = "Создать двухэтажный автобус";
+            this.buttonCreate.UseVisualStyleBackColor = true;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
             // buttonUp
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(this.buttonLeft);
             this.Controls.Add(this.buttonDown);
             this.Controls.Add(this.buttonUp);
-            this.Controls.Add(this.buttonCreateBus);
+            this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.pictureBoxBus);
             this.Name = "FormBus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -138,7 +138,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxBus;
-        private System.Windows.Forms.Button buttonCreateBus;
+        private System.Windows.Forms.Button buttonCreate;
         private System.Windows.Forms.Button buttonUp;
         private System.Windows.Forms.Button buttonDown;
         private System.Windows.Forms.Button buttonLeft;

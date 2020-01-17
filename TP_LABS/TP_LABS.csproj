@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BigParkingBus.cs" />
     <Compile Include="Bus.cs" />
     <Compile Include="CommonBus.cs" />
     <Compile Include="Dir.cs" />

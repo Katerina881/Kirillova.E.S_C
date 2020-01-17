@@ -25,5 +25,6 @@ namespace TP_LABS
         }
         public abstract void DrawBus(Graphics g);
         public abstract void MoveTransport(Direction direction);
+
     }
 }
