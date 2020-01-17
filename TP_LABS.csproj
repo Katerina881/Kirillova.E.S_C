@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Bus.cs" />
     <Compile Include="CommonBus.cs" />
-    <Compile Include="Dir.cs" />
     <Compile Include="FormBus.cs">
       <SubType>Form</SubType>
     </Compile>

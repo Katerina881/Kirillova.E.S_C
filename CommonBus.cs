@@ -17,30 +17,30 @@ namespace TP_LABS
             Weight = weight;
             MainColor = mainColor;
         }
-        public override void MoveTransport(Dir.Direction direction)
+        public override void MoveTransport(Bus.Direction direction)
         {
             float step = MaxSpeed * 100 / Weight;
             switch (direction)
             {
-                case Dir.Direction.Right:
+                case Bus.Direction.Right:
                     if (_startPosX + step < _pictureWidth - carWidth)
                     {
                         _startPosX += step;
                     }
                     break;
-                case Dir.Direction.Left:
+                case Bus.Direction.Left:
                     if (_startPosX - step > 0)
                     {
                         _startPosX -= step;
                     }
                     break;
-                case Dir.Direction.Up:
+                case Bus.Direction.Up:
                     if (_startPosY - step > 0)
                     {
                         _startPosY -= step;
                     }
                     break;
-                case Dir.Direction.Down:
+                case Bus.Direction.Down:
                     if (_startPosY + step < _pictureHeight - carHeight)
                     {
                         _startPosY += step;
