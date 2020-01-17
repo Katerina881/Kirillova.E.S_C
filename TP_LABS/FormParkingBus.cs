@@ -45,17 +45,17 @@ namespace TP_LABS
         {
             if (listBox.SelectedIndex > -1)
             {
-                if (maskedTextBox.Text != "")
+                if (maskedTextBoxBus.Text != "")
                 {
                     try
                     {
-                        var bus = parkingBus[listBox.SelectedIndex] - Convert.ToInt32(maskedTextBox.Text);
+                        var bus = parkingBus[listBox.SelectedIndex] - Convert.ToInt32(maskedTextBoxBus.Text);
                         Bitmap bmp = new Bitmap(pictureBoxBus.Width, pictureBoxBus.Height);
                         Graphics gr = Graphics.FromImage(bmp);
                         bus.SetPosition(5, 5, pictureBoxBus.Width, pictureBoxBus.Height);
                         bus.DrawBus(gr);
                         pictureBoxBus.Image = bmp;
-                        logger.Info("Изъят автомобиль " + bus.ToString() + " с места " + maskedTextBox.Text);
+                        logger.Info("Изъят автомобиль " + bus.ToString() + " с места " + maskedTextBoxBus.Text);
                         Draw();
                     }
                     catch (ParkingNotFoundException ex)
@@ -73,12 +73,13 @@ namespace TP_LABS
                 }
             }
         }
+
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Draw();
         }
 
-        private void ButtonTakebus_Click(object sender, EventArgs e)
+        private void ButtonCreate_Click(object sender, EventArgs e)
         {
             form = new FormBusConfig();
             form.AddEvent(AddBus);
@@ -99,6 +100,11 @@ namespace TP_LABS
                 {
                     MessageBox.Show(ex.Message, "Переполнение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     logger.Error("Переполнение");
+                }
+                catch (ParkingAlreadyHaveException ex)
+                {
+                    MessageBox.Show(ex.Message, "Дублирование", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Дублирование");
                 }
                 catch (Exception ex)
                 {
@@ -139,6 +145,7 @@ namespace TP_LABS
                 catch (ParkingOccupiedPlaceException ex)
                 {
                     MessageBox.Show(ex.Message, "Занятое место", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                     logger.Error("Место занято");
                 }
                 catch (Exception ex)
@@ -148,6 +155,13 @@ namespace TP_LABS
                 }
                 Draw();
             }
+        }
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            parkingBus.Sort();
+            Draw();
+            logger.Info("Сортировка уровней");
         }
     }
 }

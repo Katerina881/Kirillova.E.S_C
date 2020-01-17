@@ -47,21 +47,17 @@ namespace TP_LABS
             foreach (var level in parkingStages)
             {
                 writer.WriteLine("Level");
-                for (int i = 0; i < countPlaces; i++)
+                foreach (IBus car in level)
                 {
-                    var bus = level[i];
-                    if (bus != null)
+                    if (car.GetType().Name == "CommonBus")
                     {
-                        if (bus.GetType().Name == "CommonBus")
-                        {
-                            writer.Write(i + ":CommonBus:");
-                        }
-                        if (bus.GetType().Name == "Bus")
-                        {
-                            writer.Write(i + ":Bus:");
-                        }
-                        writer.WriteLine(bus);
+                        writer.Write(level.GetKey + ":CommonBus:");
                     }
+                    if (car.GetType().Name == "Bus")
+                    {
+                        writer.Write(level.GetKey + ":Bus:");
+                    }
+                    writer.Write(car);
                 }
             }
             writer.Close();
@@ -93,16 +89,14 @@ namespace TP_LABS
                 else
                 {
                     throw new Exception("Неверный формат файла"); 
-
                 }
                 while (true)
                 {
                     temp = sr.ReadLine();
-
                     if (temp == null)
                     {
                         break;
-                    }                        
+                    }
                     if (temp == "Level")
                     {
                         counter++;
@@ -120,7 +114,6 @@ namespace TP_LABS
                     {
                         bus = new Bus(temp.Split(':')[2]);
                     }
-
                     parkingStages[counter][Convert.ToInt32(temp.Split(':')[0])] = bus;
                 }
             }
@@ -131,6 +124,11 @@ namespace TP_LABS
         {
             byte[] info = new UTF8Encoding(true).GetBytes(text);
             stream.Write(info, 0, info.Length);
+        }
+
+        public void Sort()
+        {
+            parkingStages.Sort();
         }
     }
 }
