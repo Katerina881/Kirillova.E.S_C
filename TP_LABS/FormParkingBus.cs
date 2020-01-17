@@ -66,7 +66,7 @@ namespace TP_LABS
             Draw();
         }
 
-        private void ButtonCreate_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             form = new FormBusConfig();
             form.AddEvent(AddBus);
@@ -74,8 +74,7 @@ namespace TP_LABS
         }
 
         private void AddBus(IBus bus)
-        {
-            if (bus != null && listBox.SelectedIndex > -1)
+        { if (bus != null && listBox.SelectedIndex > -1)
             {
                 int place = parkingBus[listBox.SelectedIndex] + bus;
                 if (place > -1)
@@ -86,6 +85,37 @@ namespace TP_LABS
                 {
                     MessageBox.Show("Машину не удалось поставить");
                 }
+            }
+        }
+
+        private void СохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (parkingBus.SaveData(saveFileDialog.FileName))
+                {
+                    MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Не сохранилось", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void ЗагрузитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (parkingBus.LoadData(openFileDialog.FileName))
+                {
+                    MessageBox.Show("Загрузили", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Не загрузили", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                Draw();
             }
         }
     }
