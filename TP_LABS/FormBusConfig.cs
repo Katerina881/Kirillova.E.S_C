@@ -29,7 +29,7 @@ namespace TP_LABS
 
             buttonOtm.Click += (object sender, EventArgs e) => { Close(); };
         }
-        
+
         private void DrawBus()
         {
             if (bus != null)

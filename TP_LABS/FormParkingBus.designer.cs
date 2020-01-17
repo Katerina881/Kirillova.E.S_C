@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox = new System.Windows.Forms.GroupBox();
             this.pictureBoxBus = new System.Windows.Forms.PictureBox();
             this.buttonTakeBus = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBoxBus = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listBox = new System.Windows.Forms.ListBox();
@@ -45,7 +45,7 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBus)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -58,18 +58,18 @@
             this.pictureBoxParking.TabIndex = 0;
             this.pictureBoxParking.TabStop = false;
             // 
-            // groupBox1
+            // groupBox
             // 
-            this.groupBox1.Controls.Add(this.pictureBoxBus);
-            this.groupBox1.Controls.Add(this.buttonTakeBus);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.maskedTextBoxBus);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(755, 262);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(116, 175);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.groupBox.Controls.Add(this.pictureBoxBus);
+            this.groupBox.Controls.Add(this.buttonTakeBus);
+            this.groupBox.Controls.Add(this.label2);
+            this.groupBox.Controls.Add(this.maskedTextBox);
+            this.groupBox.Controls.Add(this.label1);
+            this.groupBox.Location = new System.Drawing.Point(755, 262);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(116, 175);
+            this.groupBox.TabIndex = 3;
+            this.groupBox.TabStop = false;
             // 
             // pictureBoxBus
             // 
@@ -98,12 +98,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Место";
             // 
-            // maskedTextBoxBus
+            // maskedTextBox
             // 
-            this.maskedTextBoxBus.Location = new System.Drawing.Point(66, 32);
-            this.maskedTextBoxBus.Name = "maskedTextBoxBus";
-            this.maskedTextBoxBus.Size = new System.Drawing.Size(35, 20);
-            this.maskedTextBoxBus.TabIndex = 1;
+            this.maskedTextBox.Location = new System.Drawing.Point(66, 32);
+            this.maskedTextBox.Name = "maskedTextBox";
+            this.maskedTextBox.Size = new System.Drawing.Size(35, 20);
+            this.maskedTextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,7 +141,7 @@
             this.buttonCreate.TabIndex = 6;
             this.buttonCreate.Text = "Создать автобус";
             this.buttonCreate.UseVisualStyleBackColor = true;
-            this.buttonCreate.Click += new System.EventHandler(this.Button1_Click);
+            this.buttonCreate.Click += new System.EventHandler(this.ButtonTakebus_Click);
             // 
             // menuStrip
             // 
@@ -164,14 +164,14 @@
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.СохранитьToolStripMenuItem_Click);
             // 
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.ЗагрузитьToolStripMenuItem_Click);
             // 
@@ -192,15 +192,15 @@
             this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.listBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.pictureBoxParking);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormParkingBus";
             this.Text = "FormParkingBus";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBus)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -212,11 +212,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.PictureBox pictureBoxBus;
         private System.Windows.Forms.Button buttonTakeBus;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxBus;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBox;

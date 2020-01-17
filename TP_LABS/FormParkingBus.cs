@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,12 @@ namespace TP_LABS
         BigParkingBus parkingBus;
         private const int countLevel = 5;
         FormBusConfig form;
+        private Logger logger;
 
         public FormParkingBus()
         {
             InitializeComponent();
+            logger = LogManager.GetCurrentClassLogger();
             parkingBus = new BigParkingBus(countLevel, pictureBoxParking.Width, pictureBoxParking.Height);
             for (int i = 0; i < countLevel; i++)
             {
@@ -29,44 +32,53 @@ namespace TP_LABS
 
         private void Draw()
         {
-            Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
-            Graphics gr = Graphics.FromImage(bmp);
-            parkingBus[listBox.SelectedIndex].Draw(gr);
-            pictureBoxParking.Image = bmp;
+            if (listBox.SelectedIndex > -1)
+            {
+                Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
+                Graphics gr = Graphics.FromImage(bmp);
+                parkingBus[listBox.SelectedIndex].Draw(gr);
+                pictureBoxParking.Image = bmp;
+            }
         }
         
         private void buttonTakeBus_Click(object sender, EventArgs e)
         {
             if (listBox.SelectedIndex > -1)
             {
-                if (maskedTextBoxBus.Text != "")
+                if (maskedTextBox.Text != "")
                 {
-                    var bus = parkingBus[listBox.SelectedIndex] - Convert.ToInt32(maskedTextBoxBus.Text);
-                    if (bus != null)
+                    try
                     {
+                        var bus = parkingBus[listBox.SelectedIndex] - Convert.ToInt32(maskedTextBox.Text);
                         Bitmap bmp = new Bitmap(pictureBoxBus.Width, pictureBoxBus.Height);
                         Graphics gr = Graphics.FromImage(bmp);
                         bus.SetPosition(5, 5, pictureBoxBus.Width, pictureBoxBus.Height);
                         bus.DrawBus(gr);
                         pictureBoxBus.Image = bmp;
+                        logger.Info("Изъят автомобиль " + bus.ToString() + " с места " + maskedTextBox.Text);
+                        Draw();
                     }
-                    else
+                    catch (ParkingNotFoundException ex)
                     {
-                        Bitmap bmp = new Bitmap(pictureBoxBus.Width, pictureBoxBus.Height);
-                        pictureBoxBus.Image = bmp;
+                        MessageBox.Show(ex.Message, "Не найдено", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
+                        pictureBoxParking.Image = bmp;
+                        logger.Error("Не найден автомобиль на указанном месте");
                     }
-                    Draw();
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Неизвестная ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        logger.Error("Неизвестная ошибка");
+                    }
                 }
             }
         }
-
         private void listBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             Draw();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void ButtonTakebus_Click(object sender, EventArgs e)
         {
             form = new FormBusConfig();
             form.AddEvent(AddBus);
@@ -74,16 +86,24 @@ namespace TP_LABS
         }
 
         private void AddBus(IBus bus)
-        { if (bus != null && listBox.SelectedIndex > -1)
+        {
+            if (bus != null && listBox.SelectedIndex > -1)
             {
-                int place = parkingBus[listBox.SelectedIndex] + bus;
-                if (place > -1)
+                try
                 {
+                    int place = parkingBus[listBox.SelectedIndex] + bus;
+                    logger.Info("Добавлен автомобиль " + bus.ToString() + " на место " + place);
                     Draw();
                 }
-                else
+                catch (ParkingOverflowException ex)
                 {
-                    MessageBox.Show("Машину не удалось поставить");
+                    MessageBox.Show(ex.Message, "Переполнение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Переполнение");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Неизвестная ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Неизвестная ошибка");
                 }
             }
         }
@@ -92,13 +112,16 @@ namespace TP_LABS
         {
             if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                if (parkingBus.SaveData(saveFileDialog.FileName))
+                try
                 {
+                    parkingBus.SaveData(saveFileDialog.FileName);
                     MessageBox.Show("Сохранение прошло успешно", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    logger.Info("Сохранено в файл " + saveFileDialog.FileName);
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Не сохранилось", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Неизвестная ошибка при сохранении", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Неизвестная ошибка при сохранении");
                 }
             }
         }
@@ -107,13 +130,21 @@ namespace TP_LABS
         {
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                if (parkingBus.LoadData(openFileDialog.FileName))
+                try
                 {
+                    parkingBus.LoadData(openFileDialog.FileName);
                     MessageBox.Show("Загрузили", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    logger.Info("Загружено из файла " + openFileDialog.FileName);
                 }
-                else
+                catch (ParkingOccupiedPlaceException ex)
                 {
-                    MessageBox.Show("Не загрузили", "Результат", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Занятое место", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Место занято");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Неизвестная ошибка при сохранении", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    logger.Error("Неизвестная ошибка");
                 }
                 Draw();
             }
