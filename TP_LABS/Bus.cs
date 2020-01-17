@@ -41,30 +41,30 @@ bool roof, bool sideImg)
             _pictureHeight = height;
         }
 
-        public void MoveTransport(Dir.Direction direction)
+        public void MoveTransport(Direction direction)
         {
             float step = MaxSpeed * 180 / Weight;
             switch (direction)
             {
-                case Dir.Direction.Right:
+                case Direction.Right:
                     if (_startPosX + step < _pictureWidth - carWidht)
                     {
                         _startPosX += step;
                     }
                     break;
-                case Dir.Direction.Left:
+                case Direction.Left:
                     if (_startPosX - step > 0)
                     {
                         _startPosX -= step;
                     }
                     break;
-                case Dir.Direction.Up:
+                case Direction.Up:
                     if (_startPosY - step > 0)
                     {
                         _startPosY -= step;
                     }
                     break;
-                case Dir.Direction.Down:
+                case Direction.Down:
                     if (_startPosY + step < _pictureHeight - carHeight)
                     {
                         _startPosY += step;

@@ -41,16 +41,16 @@ namespace TP_LABS
             switch (name)
             {
                 case "buttonUp":
-                    bus.MoveTransport(Dir.Direction.Up);
+                    bus.MoveTransport(Direction.Up);
                     break;
                 case "buttonDown":
-                    bus.MoveTransport(Dir.Direction.Down);
+                    bus.MoveTransport(Direction.Down);
                     break;
                 case "buttonLeft":
-                    bus.MoveTransport(Dir.Direction.Left);
+                    bus.MoveTransport(Direction.Left);
                     break;
                 case "buttonRight":
-                    bus.MoveTransport(Dir.Direction.Right);
+                    bus.MoveTransport(Direction.Right);
                     break;
             }
             Draw();

@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace TP_LABS
 {
-    class Dir
+    public enum Direction
     {
-        public enum Direction
-        {
-            Up,
+        Up,
 
-            Down,
+        Down,
 
-            Left,
+        Left,
 
-            Right
-        }
+        Right
     }
 }
