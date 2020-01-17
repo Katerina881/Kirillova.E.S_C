@@ -13,7 +13,8 @@ namespace TP_LABS
 
         public BigParkingBus(int countStages, int pictureWidth, int pictureHeight)
         {
-            parkingStages = new List<ParkingBus<IBus>>(); for (int i = 0; i < countStages; ++i)
+            parkingStages = new List<ParkingBus<IBus>>();
+            for (int i = 0; i < countStages; ++i)
             {
                 parkingStages.Add(new ParkingBus<IBus>(countPlaces, pictureWidth, pictureHeight));
             }

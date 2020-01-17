@@ -16,12 +16,14 @@ namespace TP_LABS
         public Bus(int maxSpeed, float weight, Color mainColor, Color dopColor, bool roof, bool sideImg) :
             base (maxSpeed, weight, mainColor)
         {
-            MaxSpeed = maxSpeed;
-            Weight = weight;
-            MainColor = mainColor;
             DopColor = dopColor;
             Roof = roof;
             SideImg = sideImg;
+        }
+
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
         }
 
         public override void DrawBus(Graphics g)
