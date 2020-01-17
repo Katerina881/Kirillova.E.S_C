@@ -33,17 +33,6 @@ bool roof, bool sideImg)
             SideImg = sideImg;
         }
 
-        public enum Direction
-        {
-            Up,
-
-            Down,
-
-            Left,
-
-            Right
-        }
-
         public void SetPosition(int x, int y, int width, int height)
         {
             _startPosX = x;
@@ -52,30 +41,30 @@ bool roof, bool sideImg)
             _pictureHeight = height;
         }
 
-        public void MoveTransport(Direction direction)
+        public void MoveTransport(Dir.Direction direction)
         {
             float step = MaxSpeed * 180 / Weight;
             switch (direction)
             {
-                case Direction.Right:
+                case Dir.Direction.Right:
                     if (_startPosX + step < _pictureWidth - carWidht)
                     {
                         _startPosX += step;
                     }
                     break;
-                case Direction.Left:
+                case Dir.Direction.Left:
                     if (_startPosX - step > 0)
                     {
                         _startPosX -= step;
                     }
                     break;
-                case Direction.Up:
+                case Dir.Direction.Up:
                     if (_startPosY - step > 0)
                     {
                         _startPosY -= step;
                     }
                     break;
-                case Direction.Down:
+                case Dir.Direction.Down:
                     if (_startPosY + step < _pictureHeight - carHeight)
                     {
                         _startPosY += step;
