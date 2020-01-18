@@ -13,8 +13,7 @@ namespace TP_LABS
         public bool Roof { private set; get; }
         public bool SideImg { private set; get; }
 
-        public Bus(int maxSpeed, float weight, Color mainColor, Color dopColor,
-bool roof, bool sideImg) :
+        public Bus(int maxSpeed, float weight, Color mainColor, Color dopColor, bool roof, bool sideImg) :
             base (maxSpeed, weight, mainColor)
         {
             MaxSpeed = maxSpeed;
