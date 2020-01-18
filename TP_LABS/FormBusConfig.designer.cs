@@ -36,14 +36,14 @@
             this.labelOsnColor = new System.Windows.Forms.Label();
             this.pictureBoxBus = new System.Windows.Forms.PictureBox();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
+            this.panelColorGray = new System.Windows.Forms.Panel();
             this.panelColorWhite = new System.Windows.Forms.Panel();
-            this.panelColorOrang = new System.Windows.Forms.Panel();
             this.panelColorGreen = new System.Windows.Forms.Panel();
-            this.panelColorDarkBlue = new System.Windows.Forms.Panel();
-            this.panelColorRed = new System.Windows.Forms.Panel();
-            this.panelColorYellow = new System.Windows.Forms.Panel();
             this.panelColorBlue = new System.Windows.Forms.Panel();
-            this.panelColorPink = new System.Windows.Forms.Panel();
+            this.panelColorYellow = new System.Windows.Forms.Panel();
+            this.panelColorBlack = new System.Windows.Forms.Panel();
+            this.panelColorLightBlue = new System.Windows.Forms.Panel();
+            this.panelColorRed = new System.Windows.Forms.Panel();
             this.buttonDob = new System.Windows.Forms.Button();
             this.buttonOtm = new System.Windows.Forms.Button();
             this.groupBoxBuses.SuspendLayout();
@@ -137,14 +137,14 @@
             // 
             // groupBoxColors
             // 
+            this.groupBoxColors.Controls.Add(this.panelColorGray);
             this.groupBoxColors.Controls.Add(this.panelColorWhite);
-            this.groupBoxColors.Controls.Add(this.panelColorOrang);
             this.groupBoxColors.Controls.Add(this.panelColorGreen);
-            this.groupBoxColors.Controls.Add(this.panelColorDarkBlue);
-            this.groupBoxColors.Controls.Add(this.panelColorRed);
-            this.groupBoxColors.Controls.Add(this.panelColorYellow);
             this.groupBoxColors.Controls.Add(this.panelColorBlue);
-            this.groupBoxColors.Controls.Add(this.panelColorPink);
+            this.groupBoxColors.Controls.Add(this.panelColorYellow);
+            this.groupBoxColors.Controls.Add(this.panelColorBlack);
+            this.groupBoxColors.Controls.Add(this.panelColorLightBlue);
+            this.groupBoxColors.Controls.Add(this.panelColorRed);
             this.groupBoxColors.Location = new System.Drawing.Point(545, 45);
             this.groupBoxColors.Name = "groupBoxColors";
             this.groupBoxColors.Size = new System.Drawing.Size(177, 353);
@@ -152,69 +152,69 @@
             this.groupBoxColors.TabStop = false;
             this.groupBoxColors.Text = "Цвета";
             // 
+            // panelColorGray
+            // 
+            this.panelColorGray.BackColor = System.Drawing.Color.Gray;
+            this.panelColorGray.Location = new System.Drawing.Point(103, 269);
+            this.panelColorGray.Name = "panelColorGray";
+            this.panelColorGray.Size = new System.Drawing.Size(53, 52);
+            this.panelColorGray.TabIndex = 5;
+            // 
             // panelColorWhite
             // 
             this.panelColorWhite.BackColor = System.Drawing.Color.White;
-            this.panelColorWhite.Location = new System.Drawing.Point(103, 269);
+            this.panelColorWhite.Location = new System.Drawing.Point(103, 185);
             this.panelColorWhite.Name = "panelColorWhite";
             this.panelColorWhite.Size = new System.Drawing.Size(53, 52);
-            this.panelColorWhite.TabIndex = 5;
-            // 
-            // panelColorOrang
-            // 
-            this.panelColorOrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelColorOrang.Location = new System.Drawing.Point(103, 185);
-            this.panelColorOrang.Name = "panelColorOrang";
-            this.panelColorOrang.Size = new System.Drawing.Size(53, 52);
-            this.panelColorOrang.TabIndex = 4;
+            this.panelColorWhite.TabIndex = 4;
             // 
             // panelColorGreen
             // 
-            this.panelColorGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelColorGreen.BackColor = System.Drawing.Color.Green;
             this.panelColorGreen.Location = new System.Drawing.Point(103, 111);
             this.panelColorGreen.Name = "panelColorGreen";
             this.panelColorGreen.Size = new System.Drawing.Size(53, 52);
             this.panelColorGreen.TabIndex = 1;
             // 
-            // panelColorDarkBlue
+            // panelColorBlue
             // 
-            this.panelColorDarkBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelColorDarkBlue.Location = new System.Drawing.Point(103, 31);
-            this.panelColorDarkBlue.Name = "panelColorDarkBlue";
-            this.panelColorDarkBlue.Size = new System.Drawing.Size(53, 52);
-            this.panelColorDarkBlue.TabIndex = 3;
-            // 
-            // panelColorRed
-            // 
-            this.panelColorRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelColorRed.Location = new System.Drawing.Point(17, 269);
-            this.panelColorRed.Name = "panelColorRed";
-            this.panelColorRed.Size = new System.Drawing.Size(53, 52);
-            this.panelColorRed.TabIndex = 1;
+            this.panelColorBlue.BackColor = System.Drawing.Color.Blue;
+            this.panelColorBlue.Location = new System.Drawing.Point(103, 31);
+            this.panelColorBlue.Name = "panelColorBlue";
+            this.panelColorBlue.Size = new System.Drawing.Size(53, 52);
+            this.panelColorBlue.TabIndex = 3;
             // 
             // panelColorYellow
             // 
-            this.panelColorYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelColorYellow.Location = new System.Drawing.Point(17, 185);
+            this.panelColorYellow.BackColor = System.Drawing.Color.Yellow;
+            this.panelColorYellow.Location = new System.Drawing.Point(17, 269);
             this.panelColorYellow.Name = "panelColorYellow";
             this.panelColorYellow.Size = new System.Drawing.Size(53, 52);
-            this.panelColorYellow.TabIndex = 2;
+            this.panelColorYellow.TabIndex = 1;
             // 
-            // panelColorBlue
+            // panelColorBlack
             // 
-            this.panelColorBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelColorBlue.Location = new System.Drawing.Point(17, 111);
-            this.panelColorBlue.Name = "panelColorBlue";
-            this.panelColorBlue.Size = new System.Drawing.Size(53, 52);
-            this.panelColorBlue.TabIndex = 1;
+            this.panelColorBlack.BackColor = System.Drawing.Color.Black;
+            this.panelColorBlack.Location = new System.Drawing.Point(17, 185);
+            this.panelColorBlack.Name = "panelColorBlack";
+            this.panelColorBlack.Size = new System.Drawing.Size(53, 52);
+            this.panelColorBlack.TabIndex = 2;
             // 
-            // panelColorPink
+            // panelColorLightBlue
             // 
-            this.panelColorPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelColorPink.Location = new System.Drawing.Point(17, 31);
-            this.panelColorPink.Name = "panelColorPink";
-            this.panelColorPink.Size = new System.Drawing.Size(53, 52);
-            this.panelColorPink.TabIndex = 0;
+            this.panelColorLightBlue.BackColor = System.Drawing.Color.Cyan;
+            this.panelColorLightBlue.Location = new System.Drawing.Point(17, 111);
+            this.panelColorLightBlue.Name = "panelColorLightBlue";
+            this.panelColorLightBlue.Size = new System.Drawing.Size(53, 52);
+            this.panelColorLightBlue.TabIndex = 1;
+            // 
+            // panelColorRed
+            // 
+            this.panelColorRed.BackColor = System.Drawing.Color.Red;
+            this.panelColorRed.Location = new System.Drawing.Point(17, 31);
+            this.panelColorRed.Name = "panelColorRed";
+            this.panelColorRed.Size = new System.Drawing.Size(53, 52);
+            this.panelColorRed.TabIndex = 0;
             // 
             // buttonDob
             // 
@@ -264,14 +264,16 @@
         private System.Windows.Forms.Label labelOsnColor;
         private System.Windows.Forms.PictureBox pictureBoxBus;
         private System.Windows.Forms.GroupBox groupBoxColors;
+
+        private System.Windows.Forms.Panel panelColorGray;
         private System.Windows.Forms.Panel panelColorWhite;
-        private System.Windows.Forms.Panel panelColorOrang;
         private System.Windows.Forms.Panel panelColorGreen;
-        private System.Windows.Forms.Panel panelColorDarkBlue;
-        private System.Windows.Forms.Panel panelColorRed;
-        private System.Windows.Forms.Panel panelColorYellow;
         private System.Windows.Forms.Panel panelColorBlue;
-        private System.Windows.Forms.Panel panelColorPink;
+        private System.Windows.Forms.Panel panelColorYellow;
+        private System.Windows.Forms.Panel panelColorBlack;
+        private System.Windows.Forms.Panel panelColorLightBlue;
+        private System.Windows.Forms.Panel panelColorRed;
+
         private System.Windows.Forms.Button buttonDob;
         private System.Windows.Forms.Button buttonOtm;
     }

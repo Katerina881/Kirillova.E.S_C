@@ -18,18 +18,17 @@ namespace TP_LABS
         public FormBusConfig()
         {
             InitializeComponent();
-            panelColorPink.MouseDown += panelBus_MouseDown;
-            panelColorBlue.MouseDown += panelBus_MouseDown;
-            panelColorYellow.MouseDown += panelBus_MouseDown;
             panelColorRed.MouseDown += panelBus_MouseDown;
-            panelColorDarkBlue.MouseDown += panelBus_MouseDown;
+            panelColorLightBlue.MouseDown += panelBus_MouseDown;
+            panelColorBlack.MouseDown += panelBus_MouseDown;
+            panelColorYellow.MouseDown += panelBus_MouseDown;
+            panelColorBlue.MouseDown += panelBus_MouseDown;
             panelColorGreen.MouseDown += panelBus_MouseDown;
-            panelColorOrang.MouseDown += panelBus_MouseDown;
             panelColorWhite.MouseDown += panelBus_MouseDown;
-
+            panelColorGray.MouseDown += panelBus_MouseDown;
             buttonOtm.Click += (object sender, EventArgs e) => { Close(); };
         }
-
+        
         private void DrawBus()
         {
             if (bus != null)

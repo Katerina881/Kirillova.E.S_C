@@ -21,6 +21,25 @@ namespace TP_LABS
             SideImg = sideImg;
         }
 
+        public Bus(string info) : base(info)
+        {
+            string[] strs = info.Split(';');
+            if (strs.Length == 6)
+            {
+                MaxSpeed = Convert.ToInt32(strs[0]);
+                Weight = Convert.ToInt32(strs[1]);
+                MainColor = Color.FromName(strs[2]);
+                DopColor = Color.FromName(strs[3]);
+                Roof = Convert.ToBoolean(strs[4]);
+                SideImg = Convert.ToBoolean(strs[5]);
+            }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + ";" + DopColor.Name + ";" + Roof + ";" + SideImg;
+        }
+
         public void SetDopColor(Color color)
         {
             DopColor = color;
