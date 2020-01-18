@@ -36,14 +36,14 @@
             this.labelOsnColor = new System.Windows.Forms.Label();
             this.pictureBoxBus = new System.Windows.Forms.PictureBox();
             this.groupBoxColors = new System.Windows.Forms.GroupBox();
-            this.panelColorVosim = new System.Windows.Forms.Panel();
-            this.panelColorSedimoy = new System.Windows.Forms.Panel();
-            this.panelColorShestoi = new System.Windows.Forms.Panel();
-            this.panelColorPyatii = new System.Windows.Forms.Panel();
-            this.panelColorChetvertii = new System.Windows.Forms.Panel();
-            this.panelColorTretii = new System.Windows.Forms.Panel();
-            this.panelColorVtoroi = new System.Windows.Forms.Panel();
-            this.panelColorPervii = new System.Windows.Forms.Panel();
+            this.panelColorWhite = new System.Windows.Forms.Panel();
+            this.panelColorOrang = new System.Windows.Forms.Panel();
+            this.panelColorGreen = new System.Windows.Forms.Panel();
+            this.panelColorDarkBlue = new System.Windows.Forms.Panel();
+            this.panelColorRed = new System.Windows.Forms.Panel();
+            this.panelColorYellow = new System.Windows.Forms.Panel();
+            this.panelColorBlue = new System.Windows.Forms.Panel();
+            this.panelColorPink = new System.Windows.Forms.Panel();
             this.buttonDob = new System.Windows.Forms.Button();
             this.buttonOtm = new System.Windows.Forms.Button();
             this.groupBoxBuses.SuspendLayout();
@@ -137,14 +137,14 @@
             // 
             // groupBoxColors
             // 
-            this.groupBoxColors.Controls.Add(this.panelColorVosim);
-            this.groupBoxColors.Controls.Add(this.panelColorSedimoy);
-            this.groupBoxColors.Controls.Add(this.panelColorShestoi);
-            this.groupBoxColors.Controls.Add(this.panelColorPyatii);
-            this.groupBoxColors.Controls.Add(this.panelColorChetvertii);
-            this.groupBoxColors.Controls.Add(this.panelColorTretii);
-            this.groupBoxColors.Controls.Add(this.panelColorVtoroi);
-            this.groupBoxColors.Controls.Add(this.panelColorPervii);
+            this.groupBoxColors.Controls.Add(this.panelColorWhite);
+            this.groupBoxColors.Controls.Add(this.panelColorOrang);
+            this.groupBoxColors.Controls.Add(this.panelColorGreen);
+            this.groupBoxColors.Controls.Add(this.panelColorDarkBlue);
+            this.groupBoxColors.Controls.Add(this.panelColorRed);
+            this.groupBoxColors.Controls.Add(this.panelColorYellow);
+            this.groupBoxColors.Controls.Add(this.panelColorBlue);
+            this.groupBoxColors.Controls.Add(this.panelColorPink);
             this.groupBoxColors.Location = new System.Drawing.Point(545, 45);
             this.groupBoxColors.Name = "groupBoxColors";
             this.groupBoxColors.Size = new System.Drawing.Size(177, 353);
@@ -152,69 +152,69 @@
             this.groupBoxColors.TabStop = false;
             this.groupBoxColors.Text = "Цвета";
             // 
-            // panelColorVosim
+            // panelColorWhite
             // 
-            this.panelColorVosim.BackColor = System.Drawing.Color.White;
-            this.panelColorVosim.Location = new System.Drawing.Point(103, 269);
-            this.panelColorVosim.Name = "panelColorVosim";
-            this.panelColorVosim.Size = new System.Drawing.Size(53, 52);
-            this.panelColorVosim.TabIndex = 5;
+            this.panelColorWhite.BackColor = System.Drawing.Color.White;
+            this.panelColorWhite.Location = new System.Drawing.Point(103, 269);
+            this.panelColorWhite.Name = "panelColorWhite";
+            this.panelColorWhite.Size = new System.Drawing.Size(53, 52);
+            this.panelColorWhite.TabIndex = 5;
             // 
-            // panelColorSedimoy
+            // panelColorOrang
             // 
-            this.panelColorSedimoy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.panelColorSedimoy.Location = new System.Drawing.Point(103, 185);
-            this.panelColorSedimoy.Name = "panelColorSedimoy";
-            this.panelColorSedimoy.Size = new System.Drawing.Size(53, 52);
-            this.panelColorSedimoy.TabIndex = 4;
+            this.panelColorOrang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panelColorOrang.Location = new System.Drawing.Point(103, 185);
+            this.panelColorOrang.Name = "panelColorOrang";
+            this.panelColorOrang.Size = new System.Drawing.Size(53, 52);
+            this.panelColorOrang.TabIndex = 4;
             // 
-            // panelColorShestoi
+            // panelColorGreen
             // 
-            this.panelColorShestoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelColorShestoi.Location = new System.Drawing.Point(103, 111);
-            this.panelColorShestoi.Name = "panelColorShestoi";
-            this.panelColorShestoi.Size = new System.Drawing.Size(53, 52);
-            this.panelColorShestoi.TabIndex = 1;
+            this.panelColorGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelColorGreen.Location = new System.Drawing.Point(103, 111);
+            this.panelColorGreen.Name = "panelColorGreen";
+            this.panelColorGreen.Size = new System.Drawing.Size(53, 52);
+            this.panelColorGreen.TabIndex = 1;
             // 
-            // panelColorPyatii
+            // panelColorDarkBlue
             // 
-            this.panelColorPyatii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelColorPyatii.Location = new System.Drawing.Point(103, 31);
-            this.panelColorPyatii.Name = "panelColorPyatii";
-            this.panelColorPyatii.Size = new System.Drawing.Size(53, 52);
-            this.panelColorPyatii.TabIndex = 3;
+            this.panelColorDarkBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelColorDarkBlue.Location = new System.Drawing.Point(103, 31);
+            this.panelColorDarkBlue.Name = "panelColorDarkBlue";
+            this.panelColorDarkBlue.Size = new System.Drawing.Size(53, 52);
+            this.panelColorDarkBlue.TabIndex = 3;
             // 
-            // panelColorChetvertii
+            // panelColorRed
             // 
-            this.panelColorChetvertii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panelColorChetvertii.Location = new System.Drawing.Point(17, 269);
-            this.panelColorChetvertii.Name = "panelColorChetvertii";
-            this.panelColorChetvertii.Size = new System.Drawing.Size(53, 52);
-            this.panelColorChetvertii.TabIndex = 1;
+            this.panelColorRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panelColorRed.Location = new System.Drawing.Point(17, 269);
+            this.panelColorRed.Name = "panelColorRed";
+            this.panelColorRed.Size = new System.Drawing.Size(53, 52);
+            this.panelColorRed.TabIndex = 1;
             // 
-            // panelColorTretii
+            // panelColorYellow
             // 
-            this.panelColorTretii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelColorTretii.Location = new System.Drawing.Point(17, 185);
-            this.panelColorTretii.Name = "panelColorTretii";
-            this.panelColorTretii.Size = new System.Drawing.Size(53, 52);
-            this.panelColorTretii.TabIndex = 2;
+            this.panelColorYellow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelColorYellow.Location = new System.Drawing.Point(17, 185);
+            this.panelColorYellow.Name = "panelColorYellow";
+            this.panelColorYellow.Size = new System.Drawing.Size(53, 52);
+            this.panelColorYellow.TabIndex = 2;
             // 
-            // panelColorVtoroi
+            // panelColorBlue
             // 
-            this.panelColorVtoroi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.panelColorVtoroi.Location = new System.Drawing.Point(17, 111);
-            this.panelColorVtoroi.Name = "panelColorVtoroi";
-            this.panelColorVtoroi.Size = new System.Drawing.Size(53, 52);
-            this.panelColorVtoroi.TabIndex = 1;
+            this.panelColorBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panelColorBlue.Location = new System.Drawing.Point(17, 111);
+            this.panelColorBlue.Name = "panelColorBlue";
+            this.panelColorBlue.Size = new System.Drawing.Size(53, 52);
+            this.panelColorBlue.TabIndex = 1;
             // 
-            // panelColorPervii
+            // panelColorPink
             // 
-            this.panelColorPervii.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panelColorPervii.Location = new System.Drawing.Point(17, 31);
-            this.panelColorPervii.Name = "panelColorPervii";
-            this.panelColorPervii.Size = new System.Drawing.Size(53, 52);
-            this.panelColorPervii.TabIndex = 0;
+            this.panelColorPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panelColorPink.Location = new System.Drawing.Point(17, 31);
+            this.panelColorPink.Name = "panelColorPink";
+            this.panelColorPink.Size = new System.Drawing.Size(53, 52);
+            this.panelColorPink.TabIndex = 0;
             // 
             // buttonDob
             // 
@@ -264,14 +264,14 @@
         private System.Windows.Forms.Label labelOsnColor;
         private System.Windows.Forms.PictureBox pictureBoxBus;
         private System.Windows.Forms.GroupBox groupBoxColors;
-        private System.Windows.Forms.Panel panelColorVosim;
-        private System.Windows.Forms.Panel panelColorSedimoy;
-        private System.Windows.Forms.Panel panelColorShestoi;
-        private System.Windows.Forms.Panel panelColorPyatii;
-        private System.Windows.Forms.Panel panelColorChetvertii;
-        private System.Windows.Forms.Panel panelColorTretii;
-        private System.Windows.Forms.Panel panelColorVtoroi;
-        private System.Windows.Forms.Panel panelColorPervii;
+        private System.Windows.Forms.Panel panelColorWhite;
+        private System.Windows.Forms.Panel panelColorOrang;
+        private System.Windows.Forms.Panel panelColorGreen;
+        private System.Windows.Forms.Panel panelColorDarkBlue;
+        private System.Windows.Forms.Panel panelColorRed;
+        private System.Windows.Forms.Panel panelColorYellow;
+        private System.Windows.Forms.Panel panelColorBlue;
+        private System.Windows.Forms.Panel panelColorPink;
         private System.Windows.Forms.Button buttonDob;
         private System.Windows.Forms.Button buttonOtm;
     }
