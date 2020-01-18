@@ -26,7 +26,6 @@ namespace TP_LABS
             panelColorGreen.MouseDown += panelBus_MouseDown;
             panelColorWhite.MouseDown += panelBus_MouseDown;
             panelColorGray.MouseDown += panelBus_MouseDown;
-
             buttonOtm.Click += (object sender, EventArgs e) => { Close(); };
         }
 
