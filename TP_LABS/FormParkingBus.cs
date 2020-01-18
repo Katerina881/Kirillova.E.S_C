@@ -74,7 +74,8 @@ namespace TP_LABS
         }
 
         private void AddBus(IBus bus)
-        { if (bus != null && listBoxLevels.SelectedIndex > -1)
+        {
+            if (bus != null && listBoxLevels.SelectedIndex > -1)
             {
                 int place = parkingBus[listBoxLevels.SelectedIndex] + bus;
                 if (place > -1)
