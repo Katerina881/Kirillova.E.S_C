@@ -22,26 +22,26 @@ namespace TP_LABS
             parkingBus = new BigParkingBus(countLevel, pictureBoxParking.Width, pictureBoxParking.Height);
             for (int i = 0; i < countLevel; i++)
             {
-                listBox.Items.Add("Уровень " + (i + 1));
+                listBoxLevels.Items.Add("Уровень " + (i + 1));
             }
-            listBox.SelectedIndex = 0;
+            listBoxLevels.SelectedIndex = 0;
         }
 
         private void Draw()
         {
             Bitmap bmp = new Bitmap(pictureBoxParking.Width, pictureBoxParking.Height);
             Graphics gr = Graphics.FromImage(bmp);
-            parkingBus[listBox.SelectedIndex].Draw(gr);
+            parkingBus[listBoxLevels.SelectedIndex].Draw(gr);
             pictureBoxParking.Image = bmp;
         }
         
         private void buttonTakeBus_Click(object sender, EventArgs e)
         {
-            if (listBox.SelectedIndex > -1)
+            if (listBoxLevels.SelectedIndex > -1)
             {
                 if (maskedTextBoxBus.Text != "")
                 {
-                    var bus = parkingBus[listBox.SelectedIndex] - Convert.ToInt32(maskedTextBoxBus.Text);
+                    var bus = parkingBus[listBoxLevels.SelectedIndex] - Convert.ToInt32(maskedTextBoxBus.Text);
                     if (bus != null)
                     {
                         Bitmap bmp = new Bitmap(pictureBoxBus.Width, pictureBoxBus.Height);
@@ -74,9 +74,9 @@ namespace TP_LABS
         }
 
         private void AddBus(IBus bus)
-        { if (bus != null && listBox.SelectedIndex > -1)
+        { if (bus != null && listBoxLevels.SelectedIndex > -1)
             {
-                int place = parkingBus[listBox.SelectedIndex] + bus;
+                int place = parkingBus[listBoxLevels.SelectedIndex] + bus;
                 if (place > -1)
                 {
                     Draw();
