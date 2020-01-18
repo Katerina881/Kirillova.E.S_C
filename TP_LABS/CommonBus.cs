@@ -11,6 +11,7 @@ namespace TP_LABS
     {
         protected const int carWidth = 100;
         protected const int carHeight = 60;
+
         public CommonBus(int maxSpeed, float weight, Color mainColor)
         {
             MaxSpeed = maxSpeed;

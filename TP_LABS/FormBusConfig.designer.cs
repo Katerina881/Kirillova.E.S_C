@@ -264,7 +264,6 @@
         private System.Windows.Forms.Label labelOsnColor;
         private System.Windows.Forms.PictureBox pictureBoxBus;
         private System.Windows.Forms.GroupBox groupBoxColors;
-
         private System.Windows.Forms.Panel panelColorGray;
         private System.Windows.Forms.Panel panelColorWhite;
         private System.Windows.Forms.Panel panelColorGreen;
@@ -273,7 +272,6 @@
         private System.Windows.Forms.Panel panelColorBlack;
         private System.Windows.Forms.Panel panelColorLightBlue;
         private System.Windows.Forms.Panel panelColorRed;
-
         private System.Windows.Forms.Button buttonDob;
         private System.Windows.Forms.Button buttonOtm;
     }

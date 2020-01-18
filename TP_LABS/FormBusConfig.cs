@@ -28,7 +28,7 @@ namespace TP_LABS
             panelColorGray.MouseDown += panelBus_MouseDown;
             buttonOtm.Click += (object sender, EventArgs e) => { Close(); };
         }
-        
+
         private void DrawBus()
         {
             if (bus != null)

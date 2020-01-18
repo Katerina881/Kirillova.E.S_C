@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,9 +14,11 @@ namespace TP_LABS
         private const int countPlaces = 20;
         private int pictureWidth;
         private int pictureHeight;
+        Logger logger;
 
         public BigParkingBus(int countStages, int pictureWidth, int pictureHeight)
         {
+            logger = LogManager.GetCurrentClassLogger();
             parkingStages = new List<ParkingBus<IBus>>();
             this.pictureWidth = pictureWidth;
             this.pictureHeight = pictureHeight;
@@ -43,23 +46,23 @@ namespace TP_LABS
             writer.WriteLine("CountLeveles:" + parkingStages.Count);
             foreach (var level in parkingStages)
             {
-                    writer.WriteLine("Level");
-                    for (int i = 0; i < countPlaces; i++)
+                writer.WriteLine("Level");
+                for (int i = 0; i < countPlaces; i++)
+                {
+                    var bus = level[i];
+                    if (bus != null)
                     {
-                        var bus = level[i];
-                        if (bus != null)
+                        if (bus.GetType().Name == "CommonBus")
                         {
-                            if (bus.GetType().Name == "CommonBus")
-                            {
-                               writer.Write(i + ":CommonBus:");
-                            }
-                            if (bus.GetType().Name == "Bus")
-                            {
-                            writer.Write(i + ":Bus:");
-                            }
-                            writer.WriteLine(bus);
+                            writer.Write(i + ":CommonBus:");
                         }
+                        if (bus.GetType().Name == "Bus")
+                        {
+                            writer.Write(i + ":Bus:");
+                        }
+                        writer.WriteLine(bus);
                     }
+                }
             }
             writer.Close();
             return true;
@@ -69,12 +72,11 @@ namespace TP_LABS
         {
             if (!File.Exists(filename))
             {
-                return false;
+                throw new FileNotFoundException();
             }
 
             using (StreamReader sr = new StreamReader(filename, System.Text.Encoding.Default))
             {
-
                 int counter = -1;
                 IBus bus = null;
 
@@ -87,19 +89,20 @@ namespace TP_LABS
                         parkingStages.Clear();
                     }
                     parkingStages = new List<ParkingBus<IBus>>(count);
-
                 }
                 else
                 {
-                    return false;
+                    throw new Exception("Неверный формат файла"); 
+
                 }
                 while (true)
                 {
                     temp = sr.ReadLine();
+
                     if (temp == null)
                     {
                         break;
-                    } 
+                    }                        
                     if (temp == "Level")
                     {
                         counter++;
