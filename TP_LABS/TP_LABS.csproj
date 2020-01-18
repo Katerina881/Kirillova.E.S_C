@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bus.cs" />
+    <Compile Include="CommonBus.cs" />
     <Compile Include="Dir.cs" />
     <Compile Include="FormBus.cs">
       <SubType>Form</SubType>
@@ -54,6 +55,8 @@
     <Compile Include="FormBus.Designer.cs">
       <DependentUpon>FormBus.cs</DependentUpon>
     </Compile>
+    <Compile Include="IBus.cs" />
+    <Compile Include="OsnBus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBus.resx">
