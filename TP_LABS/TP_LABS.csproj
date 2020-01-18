@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="IBus.cs" />
     <Compile Include="OsnBus.cs" />
+    <Compile Include="ParkingAlreadyHaveException.cs" />
     <Compile Include="ParkingBus.cs" />
     <Compile Include="ParkingNotFoundException.cs" />
     <Compile Include="ParkingOccupiedPlaceException.cs" />
